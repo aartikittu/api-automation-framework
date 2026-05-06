@@ -1,23 +1,45 @@
-# API Automation Framework (Python)
+# AI-Powered API Automation Framework
 
-This project is a basic API automation framework built using Python and the requests library.
+This project demonstrates API automation using Python along with AI-assisted test case generation using Ollama.
 
-## Features
-- Validate multiple APIs dynamically
-- JSON response validation
-- Field-level validation
-- Pass/Fail reporting
-- Handles invalid APIs and edge cases
+## Overview
 
-## Technologies Used
+The framework validates APIs by checking:
+- HTTP status codes
+- Expected response fields
+- Success and failure scenarios
+- Invalid API handling
+- AI-generated test data validation
+
+This project is part of my learning journey toward AI-enabled QA automation and SDET skills.
+
+## Tech Stack
+
 - Python
 - Requests
-- REST APIs
 - JSON
+- Logging
+- Ollama
+- Local LLM integration
 
-## How to Run
-1. Install requests:
-   pip install requests
+## Features
 
-2. Run:
-   python test_api.py
+- Validate multiple APIs dynamically
+- Check response fields based on expected field list
+- Handle success and failure API responses
+- Generate logs in console and log file
+- Generate API test cases using local AI model through Ollama
+- Clean AI output and convert JSON into Python test data
+- Add basic validation for inconsistent AI-generated output
+
+## Project Structure
+
+```text
+api-automation-framework/
+│
+├── test_api.py          # Main API test runner
+├── api_utils.py         # Reusable API validation functions
+├── ai_test.py           # Ollama AI integration for test case generation
+├── test_log.log         # Execution log file
+├── requirements.txt     # Project dependencies
+└── README.md            # Project documentation
